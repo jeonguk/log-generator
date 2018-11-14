@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="logFile" fileName="${sys:logFilename}" append="false">
+            <PatternLayout pattern="%msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="info" level="INFO" additivity="false">
+            <AppenderRef ref="logFile"/>
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="logFile" />
+        </Root>
+    </Loggers>
+</Configuration>
